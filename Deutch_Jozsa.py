@@ -1,5 +1,4 @@
 import cirq
-from cirq import sim
 
 simulator = cirq.Simulator()
 q0, q1 = cirq.LineQubit.range(2)
@@ -15,7 +14,7 @@ circuit.append([cirq.CNOT(q0, q1)])
 #End of function being tested
 
 circuit.append([cirq.H(q0)])
-circuit.append([cirq.measure(q0), cirq.measure(q0)])
+circuit.append([cirq.measure(q0), cirq.measure(q1)])
 
 print(circuit)
 
