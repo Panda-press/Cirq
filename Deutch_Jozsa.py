@@ -14,7 +14,7 @@ circuit.append([cirq.CNOT(q0, q1)])
 #End of function being tested
 
 circuit.append([cirq.H(q0)])
-circuit.append([cirq.measure(q0), cirq.measure(q1)])
+circuit.append([cirq.measure(q0)])
 
 print(circuit)
 
