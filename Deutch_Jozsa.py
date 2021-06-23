@@ -18,6 +18,7 @@ circuit.append([cirq.measure(q0)])
 
 print(circuit)
 
+#1 represents a balanced function, 0 constant
 results = simulator.run(circuit, repetitions=10)
 
 print(results)
