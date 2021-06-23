@@ -22,7 +22,7 @@ def Create_Circuit(oracel):
     #Applies hamaltonian accross all qubits
     circuit.append([cirq.H(q0), cirq.H(q1), cirq.H(q2)])
 
-    #Added the oracel
+    #Adds the oracel
     circuit.append(oracel)
 
     #Applies hamaltonian accross input qubits
