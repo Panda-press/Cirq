@@ -62,11 +62,11 @@ def QFT_Gate(n):
             return n
 
         def _decompose_(self, qubits):
-            for i in range(0, n-1):
+            for i in range(n-1, -1, -1):
                 yield cirq.H(qubits[i])
 
-                for j in range(i + 1, n):
-                    yield cirq.CZ(qubits[j], qubits[i]) ** (2 ** -(j - i))
+                for j in range(i - 1, -1, -1):
+                    yield cirq.CZ(qubits[i], qubits[j]) ** -(2 ** -(i - j))
 
         def _circuit_diagram_info_(self, args):
             return ["QTF^{0}".format(n)] * self.num_qubits()
